@@ -6,4 +6,12 @@ authors:
 
 crystal: 0.24.2
 
+dependencies:
+  spec2:
+    github: waterlink/spec2.cr
+  mocks:
+    github: waterlink/mocks.cr
+  spec2-mocks:
+    github: waterlink/spec2-mocks.cr
+
 license: MIT

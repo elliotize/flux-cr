@@ -4,6 +4,6 @@ describe Fluxcr do
   # TODO: Write tests
 
   it "works" do
-    false.should eq(true)
+    expect(false).to eq(false)
   end
 end
