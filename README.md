@@ -1,7 +1,6 @@
 # fluxcr
 
-TODO: Write a description here
-
+This is a 
 ## Installation
 
 Add this to your application's `shard.yml`:
@@ -16,6 +15,16 @@ dependencies:
 
 ```crystal
 require "fluxcr"
+finder = Fluxcr::LedFinder.new
+leds = finder.all_leds
+leds.get_statuses do |led, status|
+  puts status.state
+end
+
+leds.turn_all_off
+
+leds.turn_all_on
+leds.turn_all_off
 ```
 
 TODO: Write usage instructions here

@@ -1,4 +1,11 @@
-require "./src/fluxcr"
+require "fluxcr"
+finder = Fluxcr::LedFinder.new
+leds = finder.all_leds
+leds.get_statuses do |led, status|
+  puts status.state
+end
 
-leds = Fluxcr::LedFinder.new.find_leds
-p leds
+leds.turn_all_off
+
+leds.turn_all_on
+leds.turn_all_off
