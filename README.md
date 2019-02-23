@@ -8,7 +8,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   fluxcr:
-    github: [your-github-name]/fluxcr
+    github: elliotize/fluxcr
 ```
 
 ## Usage
@@ -22,16 +22,12 @@ leds.get_statuses do |led, status|
 end
 
 leds.turn_all_off
-
+sleep 10
 leds.turn_all_on
-leds.turn_all_off
 ```
-
-TODO: Write usage instructions here
 
 ## Development
 
-TODO: Write development instructions here
 
 ## Contributing
 
@@ -43,4 +39,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name])  - creator, maintainer
+- [elliotize](https://github.com/elliotize)  - creator, maintainer
