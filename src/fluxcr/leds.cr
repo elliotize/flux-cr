@@ -26,8 +26,16 @@ module Fluxcr
       end
     end
 
-    private def after(seconds)
+    def turn_all_on
+      @leds.each do |led|
+        led.set_on
+      end
+    end
 
+    def turn_all_off
+      @leds.each do |led|
+        led.set_off
+      end
     end
   end
 end
