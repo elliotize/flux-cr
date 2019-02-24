@@ -3,6 +3,7 @@ require "socket"
 module Fluxcr
   class Led
     getter :uuid
+    getter :ip
 
     def self.from_raw_response(led_response : String) : Led
       parts = led_response.split(",")
