@@ -11,7 +11,7 @@ module Fluxcr
 
       @leds.each do |led|
         spawn do
-          channel.send({led: led, status: led.get_status})
+          channel.send(led: led, status: led.get_status)
         end
       end
 
@@ -23,6 +23,12 @@ module Fluxcr
       @leds.each do |led|
         status_response = channel.receive
         yield status_response[:led], status_response[:status]
+      end
+    end
+
+    def each
+      @leds.each do |led|
+        yield led
       end
     end
 
